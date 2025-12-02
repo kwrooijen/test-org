@@ -1,0 +1,16 @@
+* My package
+
+#+BEGIN_SRC emacs-lisp
+(defcustom my-package-enabled t "Enable this package."
+  :type 'boolean
+  :group 'my-package)
+#+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+(when my-package-enabled
+  (setq my-package-is-definitely-enabled t))
+
+(unless my-package-enabled
+  (setq my-package-is-definitely-enabled 'not))
+#+END_SRC
